@@ -11,12 +11,12 @@ class Question:
         return self.__text 
 
     def gen_buttons(self):
-        # Görev 3 - Satır içi klavyeyi oluşturmak için bir yöntem oluşturun
+        # Görev 3 - Dahili klavyeyi oluşturmak için bir metot oluşturun
         return buttons
 
 # Görev 4 - Listeyi sorularınızla doldurun
 quiz_questions = [
-   Question("Kediler onları kimse görmediğinde ne yapar?", 1, "Uyurlar", "Mem yazarlar"),
+   Question("Kediler onları kimse görmediğinde ne yapar?", 1, "Uyurlar", "Espri yazarlar"),
    Question("Kediler sevgilerini nasıl ifade ederler?", 0, "Yüksek sesle mırıldanırlar", "Sevimli fotoğraflar", "Havlar"),
    Question("Kediler hangi kitapları okumayı sever?", 3, "Kişisel gelişim kitapları", "Zaman yönetimi: Günde 18 saat nasıl uyunur","Sahibinizden 5 dakika erken uyumanın 101 yolu", "İnsan yönetimi rehberi")
 ]
