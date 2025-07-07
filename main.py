@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from logic import quiz_questions
-# Görev 7 - defaultdict komutunu içe aktar
+# Görev 7 - defaultdict komutunu içe aktarın
 from config import token
 
 intents = discord.Intents.default()
@@ -27,7 +27,7 @@ async def send_question(ctx_or_interaction, user_id):
 
 @bot.event
 async def on_ready():
-    print(f'Yeni giiriş: {bot.user}!')
+    print(f'Yeni giriş: {bot.user}!')
 
 
 @bot.event
@@ -40,12 +40,12 @@ async def on_interaction(interaction):
     custom_id = interaction.data["custom_id"]
     if custom_id.startswith("correct"):
         await interaction.response.send_message("Doğru cevap!")
-        # Görev 9 - Doğru cevap için kullanıcıya puan ekle
+        # Görev 9 - Doğru cevap için kullanıcıya puan ekleyin
     elif custom_id.startswith("wrong"):
         await interaction.response.send_message("Yanlış cevap!")
 
-    # Görev 5 - soru sayacını uygula
-    # Görev 6 - kullanıcı tüm soruları yanıtladıysa sınav sonucuyla ilgili bir mesaj gönder. Aksi takdirde, bir sonraki soruyu gönder
+    # Görev 5 - soru sayacını ayarlayın
+    # Görev 6 - kullanıcı tüm soruları yanıtladıysa sınav sonucuyla ilgili bir mesaj gönderin. Aksi takdirde, bir sonraki soruyu gönderin
 
 @bot.command()
 async def start(ctx):
