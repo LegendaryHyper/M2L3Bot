@@ -11,7 +11,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 user_responses = {}
 # Görev 8 - Kullanıcı puanlarını kaydetmek için puan sözlüğünü oluşturun
 
-
+@bot.command()
 async def send_question(ctx_or_interaction, user_id):
     question = quiz_questions[user_responses[user_id]]
     buttons = question.gen_buttons()

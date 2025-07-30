@@ -1,4 +1,7 @@
-# Görev 2 - İhtiyacınız olan her şeyi içe aktarın
+import nextcord
+from nextcord import ui
+from nextcord.ui import Button
+from nextcord import ButtonStyle
 
 class Question:
     def __init__(self, text, answer_id, *options):
@@ -11,10 +14,12 @@ class Question:
         return self.__text 
 
     def gen_buttons(self):
-        # Görev 3 - Dahili klavyeyi oluşturmak için bir metot oluşturun
+        buttons = []
+        for i, option in enumerate(self.options):
+            if i == self.__answer_id:
+                buttons.append(ui.Button(label = option, style=ButtonStyle.primary, custom_id=f"correct{i}"))
         return buttons
 
-# Görev 4 - Listeyi sorularınızla doldurun
 quiz_questions = [
    Question("Kediler onları kimse görmediğinde ne yapar?", 1, "Uyurlar", "Espri yazarlar"),
    Question("Kediler sevgilerini nasıl ifade ederler?", 0, "Yüksek sesle mırıldanırlar", "Sevimli fotoğraflar", "Havlar"),
